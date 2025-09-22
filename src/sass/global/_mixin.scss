@@ -1,0 +1,19 @@
+@use "./variables" as *;
+
+//================================================================
+// メディアクエリ
+//================================================================
+
+@use "sass:map";
+
+@mixin mq($breakpoint: sp) {
+   @media #{map.get($breakpoints, $breakpoint)} {
+       @content;
+   }
+}
+
+// z-index
+@function layer($key) {
+    @return map.get($layer, $key);
+}
+// 例 z-index: layer(header);

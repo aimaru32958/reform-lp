@@ -1,0 +1,8 @@
+#git 読み込みを無視する
+
+# gulpの不要なファイルを無視する。
+/node_modules/
+/package-lock.json
+
+# assetsフォルダを無視する
+/assets/ 
