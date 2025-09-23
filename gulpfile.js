@@ -56,7 +56,7 @@ function watch() {
 //「ブラウザの立ち上げ」「変更を検知し、リロードする」
 function browserInit(done) {
     browserSync.init({
-        proxy:"http://http://reform-lp.local/"
+        proxy:"http://reform-lp.local/"
     });
     done();
 }

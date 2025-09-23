@@ -1,6 +1,8 @@
-
 <?php get_header(); ?>
 
-環境構築が完了しました。
+<main>
+    
+</main>
+
 
 <?php get_footer(); ?>

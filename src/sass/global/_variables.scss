@@ -4,29 +4,45 @@
 //================================================================
 
 // 色
-$main-color: #000; // メインカラー
-$sub-color1: #000; // サブカラー1
-$sub-color2: #000; // サブカラー2
-$accent-color: #000; // アクセントカラー
-// $accent-color-active: ; // アクセントカラー（アクティブ）
-$text-color1: #000; // テキストカラー1
-$text-color2: #fff; // テキストカラー2
-$text-color3: #000; // テキストカラー3
-// $link-color: ; // リンクカラー
+$main-color: #2E7D32; // メインカラー
+$sub-color: #FFFFFF; // サブカラー1
+$accent-color1: #1B3A57; // アクセントカラー
+$accent-color2: #AED581; // アクセントカラー
+$text-color1: #3D3D3D; // テキストカラー
+$red: #D82E31; // 赤
+$gray1: #FAFAFA; // グレー
+$gray2: #C4C4C4; // グレー
+$green1: #9AC964; // 緑
+$green2: #78AD3A; // 緑
+$green3: #5B8C24; // 緑
+$green4: #477C0D; // 緑
+$green5: #386307; // 緑
+$link-color: #359DE9; // リンクカラー
+$line-color: #06C755; // ラインカラー
+
+// フォント読み込み
+@font-face {
+  font-family: "DIN Alternate";
+  src: url("../fonts/DIN Alternate Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Futura Bk BT";
+  src: url("../fonts/Futura Bk BT Book.ttf") format("truetype");
+}
 
 // フォント
-// $ff-awesome: , sans-serif; // Font Awesome
-// $ff-en: , sans-serif; // 英字
-$ff-base: '', sans-serif; // 日本語標準
-$fz-base: 14px; // ベースフォントサイズ
-$fz-title: 14px; // タイトルフォントサイズ
-$fw-base: 500; // ベースフォントウェイト
-$lh-base: 1; // ベース行間
+$ff-number1: "DIN Alternate", sans-serif; // 数字1
+$ff-number2: "Futura Bk BT", sans-serif; // 数字2
+$ff-base: "Noto Sans JP", sans-serif; // 日本語標準
+$fz-base: 16rem; // ベースフォントサイズ
+$fw-base: 400; // ベースフォントウェイト
+$lh-base: 1.2; // ベース行間
+$ls-base: 0.05em;
 
 // レイアウト
-$design-pc-width: 1280; // デザインカンプPCサイズ
-$design-sp-width: 375; // デザインカンプSPサイズ
-$inner-width: 1160px; // インナー幅サイズ(デザインカンプPCサイズ)
+$design-pc-width: 1440; // デザインカンプPCサイズ
+$design-sp-width: 360; // デザインカンプSPサイズ
+$inner-width: 1120px; // インナー幅サイズ(デザインカンプPCサイズ)
 
 // ブレークポイント
 $pc-width: 1000px; // PCサイズ(以上)

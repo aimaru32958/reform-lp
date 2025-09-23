@@ -1,1 +1,97 @@
 @use "../global" as *;
+
+.footer {
+    padding-block: 40rem 12rem;
+    background: $main-color;
+    color: $sub-color;
+}
+
+.footer__inner {
+    width: 1280rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq('sp') {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 32rem;
+    }
+}
+
+.footer__logoWrap {
+    display: flex;
+    flex-direction: column;
+    
+    @include mq('sp') {
+        align-items: center;
+    }
+}
+
+.footer__logo {
+    width: 71rem;
+    aspect-ratio: 71 / 29;
+
+    @include mq('sp') {
+        width: 59rem;
+    }
+}
+
+.footer__snsWrap {
+    display: flex;
+    gap: 11rem;
+    margin-top: 8rem;
+}
+
+.footer__sns {
+    width: 22rem;
+    aspect-ratio: 1 / 1;
+    transition: all 0.3s ease;
+
+    @media(any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+
+    @include mq('sp') {
+        align-items: center;
+        gap: 8rem;
+    }
+}
+
+.footer__list {
+    a {
+        letter-spacing: 0.1em;
+        transition: all 0.3s ease;
+
+        @include mq('sp') {
+            font-size: 14rem;
+        }
+
+        @media(any-hover: hover) {
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+    }
+}
+
+.footer__copyright {
+    font-size: max(10px,10rem);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 56rem;
+
+    @include mq('sp') {
+        margin-top: 40rem;
+    }
+}
+

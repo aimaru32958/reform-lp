@@ -4,14 +4,31 @@
 // BASE
 //================================================================
 
+html {
+  font-size: calc(1 / $design-pc-width * 100vw);
+  
+  @include mq('sp') {
+    font-size: calc(1 / $design-sp-width * 100vw);
+  }
+}
+
 body {
   color: $text-color1;
   font-family: $ff-base;
   font-size: $fz-base;
   font-weight: $fw-base;
   line-height: $lh-base;
+  letter-spacing: $ls-base;
   
   position: relative;
+}
+
+main {
+  padding-top: 77rem;
+
+  @include mq('sp') {
+    padding-top: 40rem;
+  }
 }
 
 //================================================================
