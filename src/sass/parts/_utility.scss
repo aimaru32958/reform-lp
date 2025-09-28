@@ -4,4 +4,15 @@
 // utillty
 //================================================================
 
-//u-margin {}
+.u-section {
+    padding-block: 80rem;
+
+    @include mq('sp') {
+        padding-block: 24rem;
+        
+    }
+}
+
+.u-radius-none {
+    border-radius: unset !important;
+}

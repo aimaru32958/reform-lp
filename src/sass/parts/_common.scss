@@ -1,0 +1,133 @@
+@use "../global" as *;
+
+.inner {
+  width: 1120rem;
+  margin-inline: auto;
+
+  @include mq("sp") {
+    width: 304rem;
+  }
+}
+
+.bg-green {
+  width: fit-content;
+  background: $main-color;
+  color: $sub-color;
+}
+
+//================================================================
+// section title
+//================================================================
+
+.section__titleWrap {
+  font-weight: 700;
+  text-align: center;
+}
+
+.section__subTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
+  color: $accent-color2;
+  font-size: 14rem;
+  letter-spacing: $ls-base;
+  text-transform: uppercase;
+
+  @include mq("sp") {
+    gap: 4rem;
+  }
+
+  &::before {
+    content: "";
+    width: 37rem;
+    height: 10rem;
+    background: url(../img/title-arrow.svg) no-repeat center center / contain;
+  }
+}
+
+.section__title {
+  font-size: 28rem;
+  letter-spacing: $ls-base;
+  margin-top: 8rem;
+
+  @include mq("sp") {
+    font-size: 20rem;
+    margin-top: 4rem;
+  }
+}
+
+//================================================================
+// cta
+//================================================================
+
+.side-cta__wrap {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  z-index: 11;
+
+  @include mq("sp") {
+    display: none;
+  }
+}
+
+.side-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  width: 129rem;
+  height: 106rem;
+  border-radius: 10rem 0 0 10rem;
+  border: 2rem solid;
+  font-size: 14rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: $ls-base;
+  transition: all 0.3s ease;
+
+  &.--line {
+    color: $sub-color;
+    background: $line-color;
+    border-color: $line-color;
+
+    &::before {
+      flex-shrink: 0;
+      content: "";
+      width: 33rem;
+      aspect-ratio: 1 / 1;
+      background: url(../img/line-icon.png) no-repeat center center / contain;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $line-color;
+        background: $sub-color;
+      }
+    }
+  }
+
+  &.--mail {
+    background: $sub-color;
+    border-color: $accent-color2;
+
+    &::before {
+      flex-shrink: 0;
+      content: "";
+      width: 22rem;
+      aspect-ratio: 22 / 23;
+      background: url(../img/mail-icon.svg) no-repeat center center / contain;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $accent-color2;
+      }
+    }
+  }
+}

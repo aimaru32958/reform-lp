@@ -6,6 +6,7 @@
     top: 0;
     left: 0;
     z-index: layer(header);
+    pointer-events: none;
 }
 
 .header__inner {
@@ -57,6 +58,7 @@
     justify-content: space-between;
     gap: 30rem;
     padding-left: 80rem;
+    pointer-events: all;
 
     @include mq('sp') {
         display: contents;
@@ -70,6 +72,7 @@
     display: flex;
     align-items: center;
     padding-inline: 25rem;
+    pointer-events: all;
 
     @include mq('sp') {
         width: 59rem;
@@ -135,6 +138,7 @@
 .header__ctaWrap {
     display: flex;
     align-items: start;
+    pointer-events: all;
 
     @include mq('sp') {
         flex-direction: column;
@@ -237,6 +241,7 @@
 .header__drawer {
     display: none;
     transition: all 0.3s ease 0s;
+    pointer-events: all;
     
     @include mq('sp') {
         display: block;

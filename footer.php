@@ -1,3 +1,8 @@
+    <!-- cta -->
+    <div class="side-cta__wrap">
+        <a class="side-cta --line" href="<?php echo esc_url(home_url('/')); ?>">LINEで<br>問い合わせ</a>
+        <a class="side-cta --mail" href="<?php echo esc_url(home_url('/')); ?>">メールで<br>問い合わせ</a>
+    </div>
 
     <footer class="footer">
         <div class="footer__inner">
