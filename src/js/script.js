@@ -45,33 +45,11 @@ jQuery(function ($) {
     },
   });
 
-  
-  /*=====================================
-  個人と法人を切替
-  =====================================*/
-
-  jQuery(function ($) {
-    // 初期状態：法人非表示
-    $('#corporation').hide();
-
-    // 個人ボタン
-    $('.fv__btn.--individual').on('click', function () {
-      $('#corporation').hide();
-      $('#individual').show();
-    });
-
-    // 法人ボタン
-    $('.fv__btn.--corporation').on('click', function () {
-      $('#individual').hide();
-      $('#corporation').show();
-    });
-  });
-
 
   //------------------------------------
   // swiper features
   //------------------------------------
-  const swiper2 = new Swiper('.features__swiper', {
+  const swiper2 = new Swiper('.features__swiper--individual', {
     // オプションのパラメーター
     // スライドのループ
     loop: false,
@@ -87,7 +65,7 @@ jQuery(function ($) {
   });
 
   jQuery(function ($) {
-    const $lists = $('.features__lists .features__list');
+    const $lists = $('.features__lists .features__list').not('.--corporation');
 
     // 修飾子 "--1" ～ "--6" があればそれを index に（1始まり → 0始まり）
     // 無ければ DOM 上の順序で index を算出
@@ -144,9 +122,15 @@ jQuery(function ($) {
       $corpLists.removeClass('is-active');
       $(this).addClass('is-active');
 
+      const $corpWrap = $('#corporation'); // ←法人側のラッパID（あなたの実装に合わせて）
+      if ($corpWrap.length && !$corpWrap.is(':visible')) {
+        $('#individual').hide();
+        $corpWrap.show();
+      }
+
       // 該当スライドへ移動
       const idx = toIndex($(this));
-      swiper3.slideTo(idx);
+      swiper3.slideTo(idx, 0);;
     });
   });
 
@@ -218,7 +202,6 @@ jQuery(function ($) {
           }
       });
   });
-
 
 
 });

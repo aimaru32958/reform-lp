@@ -1,0 +1,85 @@
+@use "../global" as *;
+
+body:has(.thanks) .footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    @include mq('sp') {
+        position: unset;
+    }
+}
+
+.thanks {
+    height: 100vh;
+
+    @include mq('sp') {
+        height: auto;
+    }
+}
+
+.thanks__inner {
+    padding-top: 10vh;
+    text-align: center;
+
+    @include mq('sp') {
+        padding-top: 60rem;
+        padding-bottom: 60rem;
+    }
+}
+
+.thanks__title {
+    color: $main-color;
+    font-size: 40rem;
+    font-weight: 700;
+    letter-spacing: $ls-base;
+    text-align: center;
+
+    @include mq('sp') {
+        font-size: 24rem;
+    }
+}
+
+.thanks__text {
+    display: inline-block;
+    letter-spacing: 0.1em;
+    text-align: left;
+    line-height: 1.5;
+    margin-top: 40rem;
+
+    @include mq('sp') {
+        width: 250rem;
+        font-size: 14rem;
+        margin-top: 24rem;
+    }
+}
+
+.thanks__btn {
+    width: 300rem;
+    aspect-ratio: 300 / 60;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $btn-color;
+    border-radius: 8rem;
+    box-shadow: 4rem 4rem 0 0 #3c591a;
+    color: $sub-color;
+    font-weight: 700;
+    margin-top: 60rem;
+    transition: all 0.3s ease;
+
+    @include mq('sp') {
+        width: 200rem;
+        font-size: 14rem;
+        margin-top: 40rem;
+    }
+
+    @media(any-hover: hover) {
+      &:hover {
+        translate: 4rem 4rem;
+        box-shadow: 0 0 0 0 #3c591a;
+      }
+    }
+}

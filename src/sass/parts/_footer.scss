@@ -30,12 +30,12 @@
 }
 
 .footer__logo {
-    width: 71rem;
-    aspect-ratio: 71 / 29;
+    font-size: 24rem;
+  font-weight: 700;
 
-    @include mq('sp') {
-        width: 59rem;
-    }
+  @include mq("sp") {
+    font-size: 20rem;
+  }
 }
 
 .footer__snsWrap {
